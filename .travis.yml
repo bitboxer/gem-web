@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.0.0
+  - rbx
+  - ruby-head
+matrix:
+  allow_failures:
+    - rvm: rbx
+    - rvm: ruby-head
