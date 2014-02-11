@@ -16,7 +16,7 @@ To open the github page of the rails gem enter this:
     $ gem web rails
 
 You could also open the documentation or the webpage that is defined in the gemspec by
-adding a paramter to the command.
+adding a parameter to the command.
 
     Options:
       -g, --github                     Open github page of gem, this searches all urls for a github page. This is the default.
