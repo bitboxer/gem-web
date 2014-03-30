@@ -30,4 +30,14 @@ describe Gem::Web::Executor do
     end
   end
 
+  it "should open rubygems" do
+    expect(Launchy).to receive(:open).with("https://rubygems.org/gems/rails")
+    Gem::Web::Executor.new.open_page("rails", {rubygems: true})
+  end
+
+  it "should open rubytoolbox" do
+    expect(Launchy).to receive(:open).with("https://www.ruby-toolbox.com/projects/rails")
+    Gem::Web::Executor.new.open_page("rails", {rubytoolbox: true})
+  end
+
 end

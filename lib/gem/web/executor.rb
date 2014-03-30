@@ -13,6 +13,10 @@ module Gem
           find_page(gem, "documentation_uri")
         elsif options[:webpage]
           find_page(gem, "homepage_uri")
+        elsif options[:rubygems]
+          open_rubygems(gem)
+        elsif options[:rubytoolbox]
+          open_rubytoolbox(gem)
         else
           find_github(gem)
         end
@@ -49,6 +53,14 @@ module Gem
         end
 
         Launchy.open(uri)
+      end
+
+      def open_rubygems(gem)
+        Launchy.open("https://rubygems.org/gems/#{gem}")
+      end
+
+      def open_rubytoolbox(gem)
+        Launchy.open("https://www.ruby-toolbox.com/projects/#{gem}")
       end
 
     end

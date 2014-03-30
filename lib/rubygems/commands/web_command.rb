@@ -21,6 +21,12 @@ class Gem::Commands::WebCommand < Gem::Command
     add_option("-w", "--webpage", "Open webpage of gem") do |v|
       options[:webpage] = v
     end
+    add_option("-r", "--rubygems", "Open the rubygems page of a gem") do |v|
+      options[:rubygems] = v
+    end
+    add_option("-t", "--rubytoolbox", "Open the ruby toolbox page of a gem") do |v|
+      options[:rubytoolbox] = v
+    end
   end
 
   def arguments
