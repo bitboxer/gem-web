@@ -23,6 +23,8 @@ adding a parameter to the command.
       -c, --sourcecode                 Open sourcecode gem
       -d, --doc                        Open documentation of gem
       -w, --webpage                    Open webpage of gem
+      -t, --rubytoolbox                Open the rubytoolbox page for that gem
+      -r, --rubygems                   Open the rubygems page for that gem
 
 If the specified page was not found, it opens the rubygems.org page for the gem.
 
