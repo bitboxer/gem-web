@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Bodo Tasche"]
   spec.email         = ["bodo@wannawork.de"]
   spec.summary       = %q{Adds a web command for gem}
-  spec.description   = %q{Open the webpage, documentation or github page of a gem}
+  spec.description   = %q{Open the webpage, documentation or GitHub page of a gem}
   spec.homepage      = "http://github.com/bitboxer/gem-web"
   spec.license       = "MIT"
 
