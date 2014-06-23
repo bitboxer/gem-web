@@ -3,7 +3,7 @@
 [![Build Status](https://secure.travis-ci.org/bitboxer/gem-web.png?branch=master)](http://travis-ci.org/bitboxer/gem-web) [![Gem Version](https://badge.fury.io/rb/gem-web.png)](http://badge.fury.io/rb/gem-web)
 
 This gem plugin opens the webpage for a gem. As default it tries
-to find the github page.
+to find the GitHub page.
 
 ## Installation
 
@@ -11,7 +11,7 @@ to find the github page.
 
 ## Usage
 
-To open the github page of the rails gem enter this:
+To open the GitHub page of the rails gem enter this:
 
     $ gem web rails
 
@@ -19,7 +19,7 @@ You could also open the documentation or the webpage that is defined in the gems
 adding a parameter to the command.
 
     Options:
-      -g, --github                     Open github page of gem, this searches all urls for a github page. This is the default.
+      -g, --github                     Open GitHub page of gem, this searches all urls for a GitHub page. This is the default.
       -c, --sourcecode                 Open sourcecode gem
       -d, --doc                        Open documentation of gem
       -w, --webpage                    Open webpage of gem

@@ -9,7 +9,7 @@ class Gem::Commands::WebCommand < Gem::Command
       :version=>  Gem::Web::VERSION,
       :latest=>   false
 
-    add_option("-g", "--github", "Open github page of gem, this searches all urls for a github page. This is the default.") do |v|
+    add_option("-g", "--github", "Open GitHub page of gem, this searches all urls for a GitHub page. This is the default.") do |v|
       options[:github] = v
     end
     add_option("-c", "--sourcecode", "Open sourcecode gem") do |v|

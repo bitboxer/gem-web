@@ -23,7 +23,7 @@ describe Gem::Web::Executor do
     end
   end
 
-  it "should open github" do
+  it "should open GitHub" do
     VCR.use_cassette('github') do
       expect(Launchy).to receive(:open).with("http://github.com/rails/rails")
       Gem::Web::Executor.new.open_page("rails", {sourcecode: true})
