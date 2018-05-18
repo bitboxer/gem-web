@@ -1,6 +1,6 @@
 # Gem::Web
 
-[![Build Status](https://secure.travis-ci.org/bitboxer/gem-web.png?branch=master)](http://travis-ci.org/bitboxer/gem-web) [![Gem Version](https://badge.fury.io/rb/gem-web.png)](http://badge.fury.io/rb/gem-web)
+[![Build Status](https://secure.travis-ci.com/bitboxer/gem-web.png?branch=master)](http://travis-ci.com/bitboxer/gem-web) [![Gem Version](https://badge.fury.io/rb/gem-web.png)](http://badge.fury.io/rb/gem-web)
 
 This gem plugin opens the webpage for a gem. As default it tries
 to find the GitHub page.
