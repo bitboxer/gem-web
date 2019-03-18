@@ -41,10 +41,13 @@ describe Gem::Web::Executor do
   end
 
   it "should not find unexisting gem" do
-    gem = ""
-    expect do
-      Gem::Web::Executor.new.open_page(gem, {})
-    end.to output("Did not find #{gem} on rubygems.org\n").to_stdout
+    # VCR.turn_off!
+    VCR.use_cassette('rubygems') do
+      gem = ""
+      expect do
+        Gem::Web::Executor.new.open_page(gem, {})
+      end.to output("Did not find #{gem} on rubygems.org\n").to_stdout
+    end
   end
 
   it "should open ruby gems if it could not find page" do
