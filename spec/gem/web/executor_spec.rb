@@ -47,4 +47,10 @@ describe Gem::Web::Executor do
     end.to output("Did not find #{gem} on rubygems.org\n").to_stdout
   end
 
+  it "should open ruby gems if it could not find page" do
+    expect(Launchy).to receive(:open).with("https://rubygems.org/gems/rails")
+    expect do
+      Gem::Web::Executor.new.launch_browser("rails", "")
+    end.to output("Did not find page for rails, opening RubyGems page instead.\n").to_stdout
+  end
 end
