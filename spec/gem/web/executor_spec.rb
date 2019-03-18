@@ -40,4 +40,11 @@ describe Gem::Web::Executor do
     Gem::Web::Executor.new.open_page("rails", {rubytoolbox: true})
   end
 
+  it "should not find unexisting gem" do
+    gem = ""
+    expect do
+      Gem::Web::Executor.new.open_page(gem, {})
+    end.to output("Did not find #{gem} on rubygems.org\n").to_stdout
+  end
+
 end

@@ -40,7 +40,7 @@ module Gem
       def get_api_metadata(gem)
         begin
           JSON.parse(open("https://rubygems.org/api/v1/gems/#{gem}.json").read)
-        rescue OpenURI::HTTPError => ex
+        rescue VCR::Errors::UnhandledHTTPRequestError => ex
           puts "Did not find #{gem} on rubygems.org"
           nil
         end
