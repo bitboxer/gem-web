@@ -26,7 +26,7 @@ describe Gem::Web::Executor do
   it "should open GitHub" do
     VCR.use_cassette('github') do
       expect(Launchy).to receive(:open).with("http://github.com/rails/rails")
-      Gem::Web::Executor.new.open_page("rails", {sourcecode: true})
+      Gem::Web::Executor.new.open_page("rails", {github: true})
     end
   end
 
@@ -40,4 +40,20 @@ describe Gem::Web::Executor do
     Gem::Web::Executor.new.open_page("rails", {rubytoolbox: true})
   end
 
+  it "should not find unexisting gem" do
+    # VCR.turn_off!
+    VCR.use_cassette('rubygems') do
+      gem = ""
+      expect do
+        Gem::Web::Executor.new.open_page(gem, {})
+      end.to output("Did not find #{gem} on rubygems.org\n").to_stdout
+    end
+  end
+
+  it "should open ruby gems if it could not find page" do
+    expect(Launchy).to receive(:open).with("https://rubygems.org/gems/rails")
+    expect do
+      Gem::Web::Executor.new.launch_browser("rails", "")
+    end.to output("Did not find page for rails, opening RubyGems page instead.\n").to_stdout
+  end
 end
