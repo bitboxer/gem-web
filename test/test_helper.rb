@@ -6,8 +6,10 @@ require 'simplecov'
 SimpleCov.start
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.cassette_library_dir = 'test/fixtures/vcr_cassettes'
   c.hook_into :webmock # or :fakeweb
 end
 
 require 'gem/web'
+require "minitest/autorun"
+require "mocha/minitest"
