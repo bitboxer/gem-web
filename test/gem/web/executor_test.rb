@@ -16,7 +16,7 @@ class ExecutorTest < Minitest::Test
   end
 
   def test_should_open_the_source_code
-    VCR.use_cassette('sourecode') do
+    VCR.use_cassette('sourcecode') do
       Launchy.expects(:open).with("http://github.com/rails/rails")
       Gem::Web::Executor.new.open_page("rails", {sourcecode: true})
     end
